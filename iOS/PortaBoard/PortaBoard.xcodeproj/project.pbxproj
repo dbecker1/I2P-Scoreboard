@@ -13,7 +13,59 @@
 		FD4819D21F606F7F00E3D66D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD4819D11F606F7F00E3D66D /* Assets.xcassets */; };
 		FD4819D51F606F7F00E3D66D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD4819D31F606F7F00E3D66D /* LaunchScreen.storyboard */; };
 		FD4819DD1F6070D400E3D66D /* ScoreboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4819DC1F6070D400E3D66D /* ScoreboardViewController.swift */; };
+		FD7D0A971FCD1242000C5344 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7D0A951FCD1242000C5344 /* Interface.storyboard */; };
+		FD7D0A991FCD1242000C5344 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD7D0A981FCD1242000C5344 /* Assets.xcassets */; };
+		FD7D0AA01FCD1243000C5344 /* PortaBoardWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FD7D0A9F1FCD1243000C5344 /* PortaBoardWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FD7D0AA51FCD1243000C5344 /* ScoreboardInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7D0AA41FCD1243000C5344 /* ScoreboardInterfaceController.swift */; };
+		FD7D0AA71FCD1243000C5344 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7D0AA61FCD1243000C5344 /* ExtensionDelegate.swift */; };
+		FD7D0AA91FCD1243000C5344 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7D0AA81FCD1243000C5344 /* NotificationController.swift */; };
+		FD7D0AAB1FCD1243000C5344 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD7D0AAA1FCD1243000C5344 /* Assets.xcassets */; };
+		FD7D0AB01FCD1243000C5344 /* PortaBoardWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FD7D0A931FCD1242000C5344 /* PortaBoardWatch.app */; };
+		FD7D0AB91FCD13A9000C5344 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE88D791F85D51E003F7616 /* BluetoothSerial.swift */; };
+		FDE88D7A1F85D51E003F7616 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE88D791F85D51E003F7616 /* BluetoothSerial.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD7D0AA11FCD1243000C5344 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD4819BF1F606F7F00E3D66D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD7D0A9E1FCD1243000C5344;
+			remoteInfo = "PortaBoardWatch Extension";
+		};
+		FD7D0AAE1FCD1243000C5344 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD4819BF1F606F7F00E3D66D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD7D0A921FCD1242000C5344;
+			remoteInfo = PortaBoardWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FD7D0AB61FCD1243000C5344 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FD7D0AA01FCD1243000C5344 /* PortaBoardWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD7D0AB81FCD1243000C5344 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				FD7D0AB01FCD1243000C5344 /* PortaBoardWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FD4819C71F606F7F00E3D66D /* PortaBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PortaBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +76,29 @@
 		FD4819D41F606F7F00E3D66D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD4819D61F606F7F00E3D66D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD4819DC1F6070D400E3D66D /* ScoreboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreboardViewController.swift; sourceTree = "<group>"; };
+		FD7D0A931FCD1242000C5344 /* PortaBoardWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PortaBoardWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD7D0A961FCD1242000C5344 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		FD7D0A981FCD1242000C5344 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD7D0A9A1FCD1242000C5344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD7D0A9F1FCD1243000C5344 /* PortaBoardWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PortaBoardWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD7D0AA41FCD1243000C5344 /* ScoreboardInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardInterfaceController.swift; sourceTree = "<group>"; };
+		FD7D0AA61FCD1243000C5344 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		FD7D0AA81FCD1243000C5344 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		FD7D0AAA1FCD1243000C5344 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD7D0AAC1FCD1243000C5344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD7D0AAD1FCD1243000C5344 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		FDE88D791F85D51E003F7616 /* BluetoothSerial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FD4819C41F606F7F00E3D66D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD7D0A9C1FCD1243000C5344 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				FD4819C91F606F7F00E3D66D /* PortaBoard */,
+				FD7D0A941FCD1242000C5344 /* PortaBoardWatch */,
+				FD7D0AA31FCD1243000C5344 /* PortaBoardWatch Extension */,
 				FD4819C81F606F7F00E3D66D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				FD4819C71F606F7F00E3D66D /* PortaBoard.app */,
+				FD7D0A931FCD1242000C5344 /* PortaBoardWatch.app */,
+				FD7D0A9F1FCD1243000C5344 /* PortaBoardWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +131,7 @@
 		FD4819C91F606F7F00E3D66D /* PortaBoard */ = {
 			isa = PBXGroup;
 			children = (
+				FDE88D791F85D51E003F7616 /* BluetoothSerial.swift */,
 				FD4819CA1F606F7F00E3D66D /* AppDelegate.swift */,
 				FD4819CC1F606F7F00E3D66D /* ViewController.swift */,
 				FD4819CE1F606F7F00E3D66D /* Main.storyboard */,
@@ -65,6 +141,29 @@
 				FD4819DC1F6070D400E3D66D /* ScoreboardViewController.swift */,
 			);
 			path = PortaBoard;
+			sourceTree = "<group>";
+		};
+		FD7D0A941FCD1242000C5344 /* PortaBoardWatch */ = {
+			isa = PBXGroup;
+			children = (
+				FD7D0A951FCD1242000C5344 /* Interface.storyboard */,
+				FD7D0A981FCD1242000C5344 /* Assets.xcassets */,
+				FD7D0A9A1FCD1242000C5344 /* Info.plist */,
+			);
+			path = PortaBoardWatch;
+			sourceTree = "<group>";
+		};
+		FD7D0AA31FCD1243000C5344 /* PortaBoardWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FD7D0AA41FCD1243000C5344 /* ScoreboardInterfaceController.swift */,
+				FD7D0AA61FCD1243000C5344 /* ExtensionDelegate.swift */,
+				FD7D0AA81FCD1243000C5344 /* NotificationController.swift */,
+				FD7D0AAA1FCD1243000C5344 /* Assets.xcassets */,
+				FD7D0AAC1FCD1243000C5344 /* Info.plist */,
+				FD7D0AAD1FCD1243000C5344 /* PushNotificationPayload.apns */,
+			);
+			path = "PortaBoardWatch Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,15 +176,51 @@
 				FD4819C31F606F7F00E3D66D /* Sources */,
 				FD4819C41F606F7F00E3D66D /* Frameworks */,
 				FD4819C51F606F7F00E3D66D /* Resources */,
+				FD7D0AB81FCD1243000C5344 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FD7D0AAF1FCD1243000C5344 /* PBXTargetDependency */,
 			);
 			name = PortaBoard;
 			productName = PortaBoard;
 			productReference = FD4819C71F606F7F00E3D66D /* PortaBoard.app */;
 			productType = "com.apple.product-type.application";
+		};
+		FD7D0A921FCD1242000C5344 /* PortaBoardWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD7D0AB71FCD1243000C5344 /* Build configuration list for PBXNativeTarget "PortaBoardWatch" */;
+			buildPhases = (
+				FD7D0A911FCD1242000C5344 /* Resources */,
+				FD7D0AB61FCD1243000C5344 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD7D0AA21FCD1243000C5344 /* PBXTargetDependency */,
+			);
+			name = PortaBoardWatch;
+			productName = PortaBoardWatch;
+			productReference = FD7D0A931FCD1242000C5344 /* PortaBoardWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		FD7D0A9E1FCD1243000C5344 /* PortaBoardWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD7D0AB51FCD1243000C5344 /* Build configuration list for PBXNativeTarget "PortaBoardWatch Extension" */;
+			buildPhases = (
+				FD7D0A9B1FCD1243000C5344 /* Sources */,
+				FD7D0A9C1FCD1243000C5344 /* Frameworks */,
+				FD7D0A9D1FCD1243000C5344 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PortaBoardWatch Extension";
+			productName = "PortaBoardWatch Extension";
+			productReference = FD7D0A9F1FCD1243000C5344 /* PortaBoardWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -93,12 +228,22 @@
 		FD4819BF1F606F7F00E3D66D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Daniel Becker";
 				TargetAttributes = {
 					FD4819C61F606F7F00E3D66D = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 7627F8X2FM;
+						ProvisioningStyle = Automatic;
+					};
+					FD7D0A921FCD1242000C5344 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = 7627F8X2FM;
+						ProvisioningStyle = Automatic;
+					};
+					FD7D0A9E1FCD1243000C5344 = {
+						CreatedOnToolsVersion = 9.2;
 						DevelopmentTeam = 7627F8X2FM;
 						ProvisioningStyle = Automatic;
 					};
@@ -118,6 +263,8 @@
 			projectRoot = "";
 			targets = (
 				FD4819C61F606F7F00E3D66D /* PortaBoard */,
+				FD7D0A921FCD1242000C5344 /* PortaBoardWatch */,
+				FD7D0A9E1FCD1243000C5344 /* PortaBoardWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -133,6 +280,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD7D0A911FCD1242000C5344 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD7D0A991FCD1242000C5344 /* Assets.xcassets in Resources */,
+				FD7D0A971FCD1242000C5344 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD7D0A9D1FCD1243000C5344 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD7D0AAB1FCD1243000C5344 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -142,11 +306,36 @@
 			files = (
 				FD4819CD1F606F7F00E3D66D /* ViewController.swift in Sources */,
 				FD4819DD1F6070D400E3D66D /* ScoreboardViewController.swift in Sources */,
+				FDE88D7A1F85D51E003F7616 /* BluetoothSerial.swift in Sources */,
 				FD4819CB1F606F7F00E3D66D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD7D0A9B1FCD1243000C5344 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD7D0AA91FCD1243000C5344 /* NotificationController.swift in Sources */,
+				FD7D0AA71FCD1243000C5344 /* ExtensionDelegate.swift in Sources */,
+				FD7D0AB91FCD13A9000C5344 /* BluetoothSerial.swift in Sources */,
+				FD7D0AA51FCD1243000C5344 /* ScoreboardInterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD7D0AA21FCD1243000C5344 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD7D0A9E1FCD1243000C5344 /* PortaBoardWatch Extension */;
+			targetProxy = FD7D0AA11FCD1243000C5344 /* PBXContainerItemProxy */;
+		};
+		FD7D0AAF1FCD1243000C5344 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD7D0A921FCD1242000C5344 /* PortaBoardWatch */;
+			targetProxy = FD7D0AAE1FCD1243000C5344 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FD4819CE1F606F7F00E3D66D /* Main.storyboard */ = {
@@ -163,6 +352,14 @@
 				FD4819D41F606F7F00E3D66D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FD7D0A951FCD1242000C5344 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD7D0A961FCD1242000C5344 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -287,6 +484,116 @@
 			};
 			name = Release;
 		};
+		FD7D0AB11FCD1243000C5344 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7627F8X2FM;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = PortaBoardWatch_Extension;
+				INFOPLIST_FILE = PortaBoardWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.PortaBoard.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Debug;
+		};
+		FD7D0AB21FCD1243000C5344 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7627F8X2FM;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IBSC_MODULE = PortaBoardWatch_Extension;
+				INFOPLIST_FILE = PortaBoardWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.PortaBoard.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Release;
+		};
+		FD7D0AB31FCD1243000C5344 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7627F8X2FM;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "PortaBoardWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.PortaBoard.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		FD7D0AB41FCD1243000C5344 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7627F8X2FM;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "PortaBoardWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.PortaBoard.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -306,6 +613,25 @@
 				FD4819DB1F606F7F00E3D66D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD7D0AB51FCD1243000C5344 /* Build configuration list for PBXNativeTarget "PortaBoardWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD7D0AB31FCD1243000C5344 /* Debug */,
+				FD7D0AB41FCD1243000C5344 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD7D0AB71FCD1243000C5344 /* Build configuration list for PBXNativeTarget "PortaBoardWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD7D0AB11FCD1243000C5344 /* Debug */,
+				FD7D0AB21FCD1243000C5344 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

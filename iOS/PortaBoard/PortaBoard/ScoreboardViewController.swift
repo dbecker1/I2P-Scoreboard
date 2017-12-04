@@ -7,47 +7,94 @@
 //
 
 import UIKit
+import CoreBluetooth
 
-class ScoreboardViewController: UIViewController {
+class ScoreboardViewController: UIViewController, BluetoothSerialDelegate {
     
-    private var homeScore: Int! = 0
-    private var awayScore: Int! = 0
-
-    @IBOutlet weak var homeScoreLabel: UILabel!
-    @IBOutlet weak var awayScoreLabel: UILabel!
+    @IBOutlet weak var outputLabel: UILabel!
+    @IBOutlet weak var timerMinutes: UITextField!
+    @IBOutlet weak var timerSeconds: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateScores()
+        
+        serial = BluetoothSerial.init(delegate: self)
+        
+        if serial.centralManager.state != .poweredOn {
+            outputLabel.text = "Error: Unable to enable Bluetooth."
+            return
+        } else {
+            outputLabel.text = "Bluetooth Searching."
+        }
+        
+        serial.startScan()
     }
 
 
     @IBAction func increaseHomeScore(_ sender: UIButton) {
-        homeScore = min(homeScore + 1, 99)
-        updateScores()
+        if serial != nil {
+            serial.sendMessageToDevice("SCORE|H|U")
+        }
     }
     
     @IBAction func decreaseHomeScore(_ sender: UIButton) {
-        homeScore = max(homeScore - 1, 0)
-        updateScores()
+        if serial != nil {
+            serial.sendMessageToDevice("SCORE|H|D")
+        }
     }
     
     @IBAction func increaseAwayScore(_ sender: UIButton) {
-        awayScore = min(awayScore + 1, 99)
-        updateScores()
+        if serial != nil {
+            serial.sendMessageToDevice("SCORE|A|U")
+        }
     }
     
     @IBAction func decreaseAwayScore(_ sender: UIButton) {
-        awayScore = max(awayScore - 1, 0)
-        updateScores()
+        if serial != nil {
+            serial.sendMessageToDevice("SCORE|A|D")
+        }
     }
     
-    private func updateScores() {
-        let homeScoreString = String(format: "%02d", homeScore)
-        let awayScoreString = String(format: "%02d", awayScore)
-        
-        homeScoreLabel.text = homeScoreString
-        awayScoreLabel.text = awayScoreString
+    @IBAction func setTimer(_ sender: UIButton) {
+        if serial != nil {
+            let minutes = String(format: "%02d",Int(timerMinutes.text!)!)
+            let seconds = String(format: "%02d",Int(timerSeconds.text!)!)
+            serial.sendMessageToDevice("TIMERSET|\(minutes):\(seconds)")
+        }
     }
     
+    @IBAction func startTimer(_ sender: UIButton) {
+        if serial != nil {
+            serial.sendMessageToDevice("TIMERSTART")
+        }
     }
+    
+    @IBAction func stopTimer(_ sender: UIButton) {
+        if serial != nil {
+            serial.sendMessageToDevice("TIMERSTOP")
+        }
+    }
+    
+    func serialDidChangeState() {
+        print(serial.centralManager.state)
+        if serial.centralManager.state == .poweredOn {
+            serial.startScan()
+            outputLabel.text = "Bluetooth Searching."
+        }
+        print("Serial Changed State")
+    }
+    
+    func serialDidDisconnect(_ peripheral: CBPeripheral, error: NSError?) {
+        print("Serial Did Disconnect")
+        outputLabel.text = "Bluetooth Disconnected."
+    }
+    
+    func serialDidDiscoverPeripheral(_ peripheral: CBPeripheral, RSSI: NSNumber?) {
+        if peripheral.name == "PortaBoard" {
+            serial.connectToPeripheral(peripheral)
+            outputLabel.text = "PortaBoard Connected";
+        }
+        print("Peripheral discovered")
+    }
+    
+}
