@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91F17F771FD6201B00AB2537 /* UIView+IBDesignables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F17F761FD6201B00AB2537 /* UIView+IBDesignables.swift */; };
+		91F17F791FD63F7900AB2537 /* TimerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F17F781FD63F7900AB2537 /* TimerPickerView.swift */; };
 		FD4819CB1F606F7F00E3D66D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4819CA1F606F7F00E3D66D /* AppDelegate.swift */; };
-		FD4819CD1F606F7F00E3D66D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4819CC1F606F7F00E3D66D /* ViewController.swift */; };
 		FD4819D01F606F7F00E3D66D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD4819CE1F606F7F00E3D66D /* Main.storyboard */; };
 		FD4819D21F606F7F00E3D66D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD4819D11F606F7F00E3D66D /* Assets.xcassets */; };
 		FD4819D51F606F7F00E3D66D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD4819D31F606F7F00E3D66D /* LaunchScreen.storyboard */; };
@@ -69,9 +70,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		91F17F761FD6201B00AB2537 /* UIView+IBDesignables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBDesignables.swift"; sourceTree = "<group>"; };
+		91F17F781FD63F7900AB2537 /* TimerPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPickerView.swift; sourceTree = "<group>"; };
 		FD4819C71F606F7F00E3D66D /* PortaBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PortaBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD4819CA1F606F7F00E3D66D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD4819CC1F606F7F00E3D66D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FD4819CF1F606F7F00E3D66D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD4819D11F606F7F00E3D66D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD4819D41F606F7F00E3D66D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -133,14 +135,15 @@
 		FD4819C91F606F7F00E3D66D /* PortaBoard */ = {
 			isa = PBXGroup;
 			children = (
-				FDE88D791F85D51E003F7616 /* BluetoothSerial.swift */,
 				FD4819CA1F606F7F00E3D66D /* AppDelegate.swift */,
-				FD4819CC1F606F7F00E3D66D /* ViewController.swift */,
+				FDE88D791F85D51E003F7616 /* BluetoothSerial.swift */,
+				FD4819DC1F6070D400E3D66D /* ScoreboardViewController.swift */,
+				91F17F781FD63F7900AB2537 /* TimerPickerView.swift */,
+				91F17F761FD6201B00AB2537 /* UIView+IBDesignables.swift */,
 				FD4819CE1F606F7F00E3D66D /* Main.storyboard */,
 				FD4819D11F606F7F00E3D66D /* Assets.xcassets */,
 				FD4819D31F606F7F00E3D66D /* LaunchScreen.storyboard */,
 				FD4819D61F606F7F00E3D66D /* Info.plist */,
-				FD4819DC1F6070D400E3D66D /* ScoreboardViewController.swift */,
 			);
 			path = PortaBoard;
 			sourceTree = "<group>";
@@ -237,7 +240,7 @@
 				TargetAttributes = {
 					FD4819C61F606F7F00E3D66D = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7627F8X2FM;
+						DevelopmentTeam = V7HL83ZN6U;
 						ProvisioningStyle = Automatic;
 					};
 					FD7D0A921FCD1242000C5344 = {
@@ -307,8 +310,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD4819CD1F606F7F00E3D66D /* ViewController.swift in Sources */,
+				91F17F791FD63F7900AB2537 /* TimerPickerView.swift in Sources */,
 				FD4819DD1F6070D400E3D66D /* ScoreboardViewController.swift in Sources */,
+				91F17F771FD6201B00AB2537 /* UIView+IBDesignables.swift in Sources */,
 				FDE88D7A1F85D51E003F7616 /* BluetoothSerial.swift in Sources */,
 				FD4819CB1F606F7F00E3D66D /* AppDelegate.swift in Sources */,
 			);
@@ -466,7 +470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7627F8X2FM;
+				DEVELOPMENT_TEAM = V7HL83ZN6U;
 				INFOPLIST_FILE = PortaBoard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.PortaBoard;
@@ -479,7 +483,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7627F8X2FM;
+				DEVELOPMENT_TEAM = V7HL83ZN6U;
 				INFOPLIST_FILE = PortaBoard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.self.PortaBoard;
