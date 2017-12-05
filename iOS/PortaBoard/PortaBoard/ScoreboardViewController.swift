@@ -150,28 +150,31 @@ extension ScoreboardViewController: UITextFieldDelegate {
     
     @IBAction func toggleTimerState(_ sender: UIButton) {
         
-        guard let serial = serial else { return }
-        
         if timerState == .start {
-            feedbackGenerator.selectionChanged()
             timerState = .stop
-            serial.sendMessageToDevice("TIMERSTART")
-            
+            notificationFeedbackGenerator.notificationOccurred(.success)
             let redColor = UIColor(red: 255.0/255.0, green: 45.0/255.0, blue: 85.0/255.0, alpha: 1)
             UIView.animate(withDuration: 0.5, animations: {
                 self.timerToggleButton.backgroundColor = redColor
                 self.timerToggleButton.setTitle("STOP", for: .normal)
             })
-        } else {
-            notificationFeedbackGenerator.notificationOccurred(.success)
-            timerState = .start
-            serial.sendMessageToDevice("TIMERSTOP")
             
+            if serial != nil {
+                serial.sendMessageToDevice("TIMERSTART")
+            }
+        } else {
+            
+            feedbackGenerator.selectionChanged()
+            timerState = .start
             let blueColor = UIColor(red: 64.0/255.0, green: 143.0/255.0, blue: 247.0/255.0, alpha: 1)
             UIView.animate(withDuration: 0.5, animations: {
                 self.timerToggleButton.backgroundColor = blueColor
                 self.timerToggleButton.setTitle("START", for: .normal)
             })
+            
+            if serial != nil {
+                serial.sendMessageToDevice("TIMERSTOP")
+            }
         }
     }
     

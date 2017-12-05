@@ -20,7 +20,8 @@ class TimerInterfaceController: WKInterfaceController {
     var selectedMinute = 0
     var selectedSecond = 0
     
-    var timerStarted = false
+    enum TimerState { case start, stop }
+    var timerState: TimerState = .start
     
     override func willActivate() {
         super.willActivate()
@@ -44,6 +45,7 @@ class TimerInterfaceController: WKInterfaceController {
         
     }
     @IBAction func setTimer() {
+        WKInterfaceDevice.current().play(.click)
         if serial != nil {
             let minutes = String(format: "%02d",selectedMinute)
             let seconds = String(format: "%02d",selectedSecond)
@@ -52,23 +54,43 @@ class TimerInterfaceController: WKInterfaceController {
         
     }
     @IBAction func startStopTimer() {
-        if !timerStarted {
+        
+        
+        if timerState == .start {
+            WKInterfaceDevice.current().play(.stop)
+            timerState = .stop
+            let redColor = UIColor(red: 255.0/255.0, green: 45.0/255.0, blue: 85.0/255.0, alpha: 1)
+            self.animate(withDuration: 0.5, animations: {
+                self.startStopTimerButton.setBackgroundColor(redColor)
+                self.startStopTimerButton.setTitle("STOP")
+            })
+            
             if serial != nil {
                 serial.sendMessageToDevice("TIMERSTART")
             }
-            timerStarted = true
         } else {
+            WKInterfaceDevice.current().play(.start)
+            timerState = .start
+            let blueColor = UIColor(red: 64.0/255.0, green: 143.0/255.0, blue: 247.0/255.0, alpha: 1)
+            self.animate(withDuration: 0.5, animations: {
+                self.startStopTimerButton.setBackgroundColor(blueColor)
+                self.startStopTimerButton.setTitle("START")
+            })
+            
             if serial != nil {
                 serial.sendMessageToDevice("TIMERSTOP")
             }
-            timerStarted = false
         }
     }
     @IBAction func minuteUpdated(_ value: Int) {
+        WKInterfaceDevice.current().play(.click)
+        
         selectedMinute = value
     }
     
     @IBAction func secondUpdated(_ value: Int) {
+        WKInterfaceDevice.current().play(.click)
+        
         selectedSecond = value
     }
     

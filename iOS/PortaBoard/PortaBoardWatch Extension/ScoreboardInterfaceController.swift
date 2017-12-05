@@ -46,22 +46,26 @@ class ScoreboardInterfaceController: WKInterfaceController, BluetoothSerialDeleg
     }
     
     @IBAction func increaseHomeScore() {
+        WKInterfaceDevice.current().play(.click)
         if serial != nil {
             serial.sendMessageToDevice("SCORE|H|U")
         }
     }
     
     @IBAction func decreaseHomeScore() {
+        WKInterfaceDevice.current().play(.click)
         if serial != nil {
             serial.sendMessageToDevice("SCORE|H|D")
         }
     }
     @IBAction func increaseAwayScore() {
+        WKInterfaceDevice.current().play(.click)
         if serial != nil {
             serial.sendMessageToDevice("SCORE|A|U")
         }
     }
     @IBAction func decreaseAwayScore() {
+        WKInterfaceDevice.current().play(.click)
         if serial != nil {
             serial.sendMessageToDevice("SCORE|A|D")
         }
