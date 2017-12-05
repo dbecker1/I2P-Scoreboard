@@ -1,27 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13770" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch38" orientation="portrait">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch42" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
     </dependencies>
     <scenes>
-        <!--Porta Board Interface Controller-->
+        <!--Scoreboard Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="PortaBoardInterfaceController" customModule="PortaBoardWatch_Extension">
+                <controller id="AgC-eL-Hgc" customClass="ScoreboardInterfaceController" customModule="PortaBoardWatch_Extension">
                     <items>
-                        <label alignment="left" text="not connected" id="m0v-nM-bus"/>
+                        <label height="30" alignment="center" text="PortaBoard" textAlignment="center" id="pZZ-U7-IeJ"/>
+                        <group width="131" alignment="center" spacing="17" id="jNf-h0-ogB">
+                            <items>
+                                <group width="50" alignment="center" layout="vertical" spacing="8" id="hzl-td-eDb">
+                                    <items>
+                                        <label width="48" alignment="left" text="Home" textAlignment="center" id="ahK-Db-xeu"/>
+                                        <button width="47" height="40" alignment="left" title="+" id="Jdk-cV-Sa0">
+                                            <connections>
+                                                <action selector="increaseHomeScore" destination="AgC-eL-Hgc" id="wfi-7y-Uq1"/>
+                                            </connections>
+                                        </button>
+                                        <button width="47" height="40" alignment="left" title="-" id="NbQ-QR-QuQ">
+                                            <connections>
+                                                <action selector="decreaseHomeScore" destination="AgC-eL-Hgc" id="fFT-of-5nq"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="52" alignment="center" layout="vertical" spacing="8" id="7ks-tQ-c5O">
+                                    <items>
+                                        <label width="47" alignment="left" text="Away" textAlignment="center" id="ESh-E4-ADW"/>
+                                        <button width="47" height="40" alignment="left" title="+" id="SlW-jw-5og">
+                                            <connections>
+                                                <action selector="increaseAwayScore" destination="AgC-eL-Hgc" id="v2a-Gt-RFo"/>
+                                            </connections>
+                                        </button>
+                                        <button width="47" height="40" alignment="left" title="-" id="cCI-gg-5qk">
+                                            <connections>
+                                                <action selector="decreaseAwayScore" destination="AgC-eL-Hgc" id="b9U-3X-fwV"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
                     </items>
                     <connections>
-                        <outlet property="outputText" destination="m0v-nM-bus" id="rO5-Ye-dGz"/>
+                        <outlet property="label" destination="pZZ-U7-IeJ" id="Ry7-KN-mvn"/>
+                        <segue destination="fWe-QQ-C3c" kind="relationship" relationship="nextPage" id="zfU-Ks-zSs"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="219.69230769230771" y="344.79487179487182"/>
+        </scene>
+        <!--Timer Interface Controller-->
+        <scene sceneID="YGi-Jk-Wqm">
+            <objects>
+                <controller id="fWe-QQ-C3c" customClass="TimerInterfaceController" customModule="PortaBoardWatch_Extension">
+                    <items>
+                        <label height="30" alignment="center" text="PortaBoard" textAlignment="center" id="AoN-v8-Iwn"/>
+                        <group width="136" alignment="center" spacing="4" id="5nj-hT-qc8">
+                            <items>
+                                <picker width="58" height="54" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="sqe-0C-KlE">
+                                    <connections>
+                                        <action selector="minuteUpdated:" destination="fWe-QQ-C3c" id="9Vv-l4-1Ti"/>
+                                    </connections>
+                                </picker>
+                                <label height="35" alignment="left" text=":" id="1DR-JE-lrT"/>
+                                <picker width="59" height="56" alignment="left" id="Je3-qM-gw2">
+                                    <connections>
+                                        <action selector="secondUpdated:" destination="fWe-QQ-C3c" id="Tf2-D5-HVM"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Set Timer" id="gNQ-tk-b86">
+                            <connections>
+                                <action selector="setTimer" destination="fWe-QQ-C3c" id="CU1-q6-sNl"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="START" id="7lh-tw-SUA">
+                            <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="startStopTimer" destination="fWe-QQ-C3c" id="Lii-Lb-UTz"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="minutePicker" destination="sqe-0C-KlE" id="lXR-P9-Tdi"/>
+                        <outlet property="secondPicker" destination="Je3-qM-gw2" id="GdQ-Mf-9NT"/>
+                        <outlet property="startStopTimerButton" destination="7lh-tw-SUA" id="Foh-gq-ZM2"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="473.38461538461542" y="344.79487179487182"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

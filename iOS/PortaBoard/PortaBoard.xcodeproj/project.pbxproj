@@ -22,6 +22,7 @@
 		FD7D0AAB1FCD1243000C5344 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD7D0AAA1FCD1243000C5344 /* Assets.xcassets */; };
 		FD7D0AB01FCD1243000C5344 /* PortaBoardWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FD7D0A931FCD1242000C5344 /* PortaBoardWatch.app */; };
 		FD7D0AB91FCD13A9000C5344 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE88D791F85D51E003F7616 /* BluetoothSerial.swift */; };
+		FD8BB25A1FD63D78000491FD /* TimerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8BB2591FD63D78000491FD /* TimerInterfaceController.swift */; };
 		FDE88D7A1F85D51E003F7616 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE88D791F85D51E003F7616 /* BluetoothSerial.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		FD7D0AAA1FCD1243000C5344 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD7D0AAC1FCD1243000C5344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD7D0AAD1FCD1243000C5344 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		FD8BB2591FD63D78000491FD /* TimerInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerInterfaceController.swift; sourceTree = "<group>"; };
 		FDE88D791F85D51E003F7616 /* BluetoothSerial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 				FD7D0AAA1FCD1243000C5344 /* Assets.xcassets */,
 				FD7D0AAC1FCD1243000C5344 /* Info.plist */,
 				FD7D0AAD1FCD1243000C5344 /* PushNotificationPayload.apns */,
+				FD8BB2591FD63D78000491FD /* TimerInterfaceController.swift */,
 			);
 			path = "PortaBoardWatch Extension";
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				FD7D0AA91FCD1243000C5344 /* NotificationController.swift in Sources */,
 				FD7D0AA71FCD1243000C5344 /* ExtensionDelegate.swift in Sources */,
 				FD7D0AB91FCD13A9000C5344 /* BluetoothSerial.swift in Sources */,
+				FD8BB25A1FD63D78000491FD /* TimerInterfaceController.swift in Sources */,
 				FD7D0AA51FCD1243000C5344 /* ScoreboardInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
