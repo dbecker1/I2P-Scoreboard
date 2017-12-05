@@ -25,6 +25,11 @@ class TimerInterfaceController: WKInterfaceController {
     
     override func willActivate() {
         super.willActivate()
+        
+    }
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
+        
         for i in 0...59 {
             let pickerItem = WKPickerItem();
             if (i < 10) {
@@ -37,11 +42,6 @@ class TimerInterfaceController: WKInterfaceController {
         
         minutePicker.setItems(timePickerItems)
         secondPicker.setItems(timePickerItems)
-        
-    }
-    override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
-        
         
     }
     @IBAction func setTimer() {
