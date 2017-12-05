@@ -35,7 +35,7 @@ class TimerPickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSourc
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let timeDescription = component == 0 ? "Minutes" : "Seconds"
         let string = "\(row) " + timeDescription
-        let attributedString = NSAttributedString(string: string, attributes: [NSForegroundColorAttributeName:UIColor.white])
+        let attributedString = NSAttributedString(string: string, attributes: [NSAttributedStringKey.foregroundColor:UIColor.white])
         return attributedString
     }
     
